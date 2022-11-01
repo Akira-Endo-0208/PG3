@@ -14,6 +14,12 @@ Type Min(Type a, Type b) {
 	{
 		return static_cast<Type>(a);
 	}
+	
+	if (a == b)
+	{
+		return static_cast<Type>(a);
+	}
+
 }
 
 //オーバーライド
