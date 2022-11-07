@@ -1,25 +1,71 @@
 #include <stdio.h>
+#include <Windows.h>
+#include <time.h>
+#include <functional>
 
-int Recursive(int hour) {
 
-	if (hour == 1)
+std::function<void(int*)> Result = [](int* judge) {
+	if (*judge == 1)
 	{
-		return 100;
+		printf("結果は当たっていました");
 	}
-	
+	else {
+		printf("結果は外れていました");
+	}
+};
+
+std::function<void(int)> Time = [](int judge) {
+	Sleep(3000);
+	printf("抽選中...\n");
+	Result(&judge);
+};
+int main(int argc, char const* argv[]) {
 
 	
-	return (Recursive(hour - 1) * 2 - 50);
+	int choice = 0;
+	int dice = 0;
+	int result = 0;
+	int judge = 0;
 	
-}
+	srand(time(NULL));
 
-int main(void) {
-	int hour = 6;
-	
-	int result;
+	printf("丁半博打を始めます\n");
+	printf("出目が丁（偶数）になるか半（奇数）になるか選んでください\n");
+	printf("丁...0 半...1\n");
+	scanf_s("%d", &choice);
 
-	result = Recursive(hour);
-	printf("%d時間働くと、%d円の時給", hour, result);
+	dice = rand() % 6 + 1;
+	if (choice >= 2)
+	{
+		printf("0か1を入力してください");
+
+		return 0;
+	}
+
+
+	if (dice % 2 == 0)
+	{
+		result = 0;
+	}
+	else if (dice % 2 == 1)
+	{
+		result = 1;
+	}
+
+	if (result == 0 && choice == 0 || result == 1 && choice == 1)
+	{
+		judge = 1;
+	}
+	else
+	{
+		judge = 0;
+	}
+
+	Time(judge);
+
+
+
+
 
 	return 0;
 }
