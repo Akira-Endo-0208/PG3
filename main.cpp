@@ -2,20 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct cell {
 
+
+typedef struct cell
+{
 	int val;
 	struct cell* next;
+}CELL;
 
-} CELL;
+
 
 void create(CELL* endCell, int val);
 void index(CELL* endCell);
 
 int main() {
 	int val;
+
 	CELL head;
 	head.next = nullptr;
+
 	while (true)
 	{
 
@@ -23,11 +28,15 @@ int main() {
 		printf("入力する値:");
 		scanf_s("%d", &val);
 
+		//最後尾にセルを追加
 		create(&head, val);
 
+		printf("一覧\n");
+		//リスト一覧の表示
 		index(&head);
 
 	}
+
 	return 0;
 }
 
