@@ -24,7 +24,7 @@ int main() {
 	printf("2019s\n");
 	for (list<const char*>::iterator itr = stations.begin(); itr != stations.end(); ++itr)
 	{
-		
+
 		if (strcmp(*itr,"Tabata") == 0)
 		{
 
@@ -44,7 +44,7 @@ int main() {
 	printf("2022s\n");
 	for (list<const char*>::iterator itr = stations.begin(); itr != stations.end(); ++itr)
 	{
-		
+
 		if (strcmp(*itr,"Tamachi") == 0)
 		{
 
