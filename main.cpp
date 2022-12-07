@@ -4,8 +4,10 @@
 using namespace std;
 int main() {
 
-	//コンテナ名
+
 	printf("1970s\n");
+
+	//コンテナ名
 	list<const char*> stations =
 	{
 	"Shinagawa","Tamachi","Hamamatsucho","Shinbashi",
@@ -24,8 +26,8 @@ int main() {
 	printf("2019s\n");
 	for (list<const char*>::iterator itr = stations.begin(); itr != stations.end(); ++itr)
 	{
-
-		if (strcmp(*itr,"Tabata") == 0)
+		
+		if (strcmp(*itr, "Tabata") == 0)
 		{
 
 			itr = stations.insert(itr, "NishiNippori");
@@ -42,10 +44,11 @@ int main() {
 	printf("--------------------\n");
 
 	printf("2022s\n");
+
 	for (list<const char*>::iterator itr = stations.begin(); itr != stations.end(); ++itr)
 	{
-
-		if (strcmp(*itr,"Tamachi") == 0)
+		
+		if (strcmp(*itr, "Tamachi") == 0)
 		{
 
 			itr = stations.insert(itr, "TakanawaGateway");
@@ -61,4 +64,3 @@ int main() {
 
 	printf("--------------------\n");
 	return 0;
-}
