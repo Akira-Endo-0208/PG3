@@ -31,11 +31,11 @@ void Enemy::Update() {
 }
 
 void Enemy::Draw()
-{
+	{
 	if(IsAlive() == true)
-	{ 
+		{
 		printf("“G‚Í¶‘¶’†\n");
-	}
+		}
 	else
 	{
 		printf("“G‚Í€–S\n");
