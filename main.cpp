@@ -34,8 +34,5 @@ int main() {
     enemy3.Draw();
     printf("---\n");
 
-
-        }
-    }
         return 0;
 }
