@@ -8,13 +8,14 @@ public:
 	bool IsAlive();
 	void SetDeath();
 
-	void Update();
+
+void Update();
 	void Draw();
 
 public:
 	static bool isAllAlive;
 
-private:
+private: 
 	bool isAlive;
 };
 
