@@ -1,23 +1,36 @@
 #include <stdio.h>
-#include <Windows.h>
-#include "Enemy.h"
-
+#include "Circle.h"
+#include "Rectangle.h"
 
 
 int main() {
+    Circle circle;
+    Rectangle rectangle;
+    int radius = 0;
+    int width = 0;
+    int length = 0;
+    radius = circle.GetRadius();
+    printf("‰~‚Ì”¼Œa‚ğ“ü—Í\n");
+    scanf_s("%d", &radius);
+    circle.SetRadius(radius);
 
-    Enemy* enemy = new Enemy;
-    int input = 0;
+    circle.size();
+    circle.draw();
 
+    printf("--------------\n\n");
 
-    while (true)
-    {
-        printf("0:Exit 1:continue ==> ");
-        scanf_s("%d", &input);
-        if (input == 0){break;}
+    width = rectangle.GetWidth();
+    printf("‹éŒ`‚Ì‰¡‚Ì’·‚³‚ğ“ü—Í\n");
+    scanf_s("%d", &width);
+    rectangle.SetWidth(width);
 
-        enemy->Update();
+    length = rectangle.GetLength();
+    printf("\n‹éŒ`‚Ìc‚Ì’·‚³‚ğ“ü—Í\n");
+    scanf_s("%d", &length);
+    rectangle.SetLength(length);
 
-    }
-        return 0;
+    rectangle.size();
+    rectangle.draw();
+
+    return 0;
 }
